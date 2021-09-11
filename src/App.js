@@ -42,9 +42,10 @@ class App extends React.Component {
       <div className="App">
         <h1>DOGS!</h1>
         {
-          loading ? <p>Loading...</p>
-            : <DogsContainer dog={ dog } handleClick={ this.handleClick } />
+          loading ? <div className="doguinho-container">Click OK to see DA DOG!</div>
+            : <DogsContainer dog={ dog } />
         }
+        <button type="button" onClick={ this.handleClick }>MOOOOORE DOOOOOGS!</button>
       </div>
     );
   }

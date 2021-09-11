@@ -1,13 +1,21 @@
 import React from 'react';
+import './DogsContainer.css';
 import PropTypes from 'prop-types';
 
 class DogsContainer extends React.Component {
+
+  componentDidMount() {
+    const { dog } = this.props;
+    const breed = dog.split('https://images.dog.ceo/breeds/')[1].split('/')[0];
+    localStorage.setItem('urlDog', dog);
+    alert(`A raça do doguinho é: ${breed}`);
+  }
+
   render() {
-    const { dog, handleClick } = this.props;
+    const { dog } = this.props;
     return (
       <div>
         <img src={ dog } alt="" />
-        <button type="button" onClick={ handleClick }>MOOOOORE DOOOOOGS!</button>
       </div>
     );
   }
@@ -15,7 +23,6 @@ class DogsContainer extends React.Component {
 
 DogsContainer.propTypes = {
   dog: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired,
 };
 
 export default DogsContainer;

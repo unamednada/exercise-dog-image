@@ -1,4 +1,37 @@
 .App {
   text-align: center;
+  background-image: url('bg.jpg');
+  margin: 0;
+  padding: 5%;
 }
 
+h1 {
+  background-color: antiquewhite;
+  border-radius: 12px;
+  padding: 1%;
+  font-size: 40px;
+}
+
+.doguinho-container {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  border-radius: 12px;
+  font-size: 40px;
+}
+
+button {
+  margin: 2%;
+  padding: 2%;
+  font-size: 20px;
+  border-radius: 12px;
+  background-color: black;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: red;
+}
